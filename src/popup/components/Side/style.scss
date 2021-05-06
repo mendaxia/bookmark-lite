@@ -1,0 +1,151 @@
+.sider {
+  height: 100vh;
+  background-color: rgb(237, 240, 244);
+  z-index: 200;
+  max-width: 264px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    margin: 1.4rem 0 2rem 4px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0.6rem 0.3rem;
+    max-width: 260px;
+    max-height: 40px;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+  }
+
+  &__icon {
+    margin-left: 1.1rem;
+    margin-right: 1.3rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 8px 0px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--white);
+    }
+
+    svg {
+      width: 24px;
+    }
+  }
+
+  &__content {
+    font-size: 1rem;
+    font-weight: 200;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
+  }
+
+  .collapsed &__content {
+    overflow: hidden;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: var(--greyDark);
+    font-weight: 200;
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  &.light {
+    box-shadow: -4px 0px 20px rgba(50, 50, 93, 0.25) inset;
+  }
+
+  &.dark {
+    background: rgb(21, 23, 27);
+    box-shadow: -4px 0px 20px rgba(20, 20, 20, 1) inset;
+
+    .item {
+      &__title {
+        color: var(--white);
+      }
+      &:hover {
+        background: var(--greyDark);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        & .item__icon {
+          box-shadow: none;
+        }
+      }
+    }
+
+    & .sider__icon {
+      background: var(--greyDark);
+      color: #fff;
+    }
+
+    & .sider__text {
+      color: #fff;
+    }
+
+    & .item__icon {
+      background: var(--greyDark);
+      border: 0.2rem solid var(--greyDark);
+
+      img {
+        border: none;
+      }
+    }
+  }
+}
+.tabs {
+  .item {
+    background: transparent;
+    box-shadow: none;
+    padding: 0.6rem 0.2rem;
+    max-width: 250px;
+    max-height: 50px;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    border-radius: 8px;
+    &__icon {
+      width: 2.2rem;
+      height: 2.2rem;
+      border: 0.2rem solid var(--white);
+      margin-right: 1rem;
+      background: var(--white);
+      border-radius: 0.4rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 8px 0px;
+
+      img {
+        min-width: 1.8rem;
+      }
+    }
+    &__title {
+      font-weight: 400;
+      color: var(--greyDark);
+    }
+
+    &:hover {
+      background: var(--white);
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+      & .item__icon {
+        box-shadow: none;
+      }
+    }
+
+    &__content {
+      transition: all 0.2s ease-in;
+    }
+
+    &__action {
+      flex: 0 0 1;
+      margin-left: auto;
+    }
+  }
+}

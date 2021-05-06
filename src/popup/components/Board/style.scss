@@ -1,0 +1,18 @@
+.board {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+
+  &.light {
+    background: #f0f2f5;
+  }
+
+  &.dark {
+    background: rgb(21, 23, 27);
+  }
+}
+
+.columns {
+  display: flex;
+  padding: 1rem;
+}
