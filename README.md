@@ -1,5 +1,8 @@
 # Manage common tabs in new tab with local storage
 
+##Screen shot
+![image](https://ericli.ca/img/work_bookmark-lite.png)
+
 ## Available Scripts
 
 ### `yarn start`
